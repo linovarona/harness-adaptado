@@ -1,0 +1,28 @@
+{
+  "project": "PDL-FC-MVP",
+  "version": "1.0.0",
+  "features": [
+    {
+      "id": "FIX-001",
+      "name": "Diagnóstico: BD SQLite no se crea al finalizar instalación",
+      "description": "Investigar por qué PDL-FC-MVP no inicializa la BD SQLite después de la instalación. Análisis de scripts de instalación, código fuente (Program.cs, DbContext), permisos de carpeta Data/, y path de SQLite. Resultado: reporte de hallazgos con hipótesis confirmadas/descartadas.",
+      "status": "in_progress",
+      "sdd": true,
+      "priority": "high",
+      "created": "2026-05-16",
+      "spec_ready_date": "2026-05-16",
+      "in_progress_date": "2026-05-16",
+      "done_date": null,
+      "notes": "Objetivo dual: (1) Diagnosticar fallo real en PDL-FC-MVP, (2) Validar y documentar el proceso de diagnóstico como funcionalidad del harness. El proceso debe ser estructurable y repetible para futuros diagnósticos.",
+      "refinement": null
+    }
+  ],
+  "rules": {
+    "max_in_progress": 1,
+    "max_spec_ready": 1,
+    "require_sdd_for": [
+      "high",
+      "medium"
+    ]
+  }
+}

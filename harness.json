@@ -1,0 +1,27 @@
+{
+  "name": "Harness Adaptado - Single Agent",
+  "version": "1.0.0",
+  "adapted_from": "https://github.com/linovarona/hsdd-notecli",
+  "agent_mode": "single",
+  "approval_gate": "manual",
+  "phases": [
+    "spec_author",
+    "implementer",
+    "reviewer"
+  ],
+  "rules": {
+    "one_feature_at_a_time": true,
+    "ears_notation_required": true,
+    "traceability_required": true,
+    "human_approval_before_code": true,
+    "state_on_disk": true,
+    "append_only_history": true
+  },
+  "file_naming": {
+    "requirements": "requirements.md",
+    "design": "design.md",
+    "tasks": "tasks.md",
+    "impl_progress": "impl_{feature_id}.md",
+    "review_progress": "review_{feature_id}.md"
+  }
+}
