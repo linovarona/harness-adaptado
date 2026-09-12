@@ -42,3 +42,38 @@
 ## Entradas
 
 <!-- Añadir nuevas entradas aquí, al final -->
+
+## Sesión 2026-05-16 - Implementación FIX-001
+
+**Objetivo:** Resolver problema de creación de BD SQLite al finalizar instalación
+
+**Actividades realizadas:**
+
+1. **Análisis del problema**
+   - Clonado repositorio PDL-FC-MVP
+   - Identificado que Schema.sql y SeedData.sql no se copian a ProgramData
+   - Revisado post-install.ps1, Package.wxs, DatabaseInitializer.cs
+
+2. **Implementación de solución**
+   - Modificado `post-install.ps1` para copiar archivos SQL desde directorio de instalación
+   - Agregados componentes WiX `CopyFile` en `Package.wxs` para copia automática durante instalación
+   - Creado script standalone `copy-sql-files.ps1` para reparación manual
+
+3. **Documentación**
+   - Creado `progress/impl_FIX-001.md` con detalles de implementación
+   - Actualizado este archivo con resumen de sesión
+
+**Archivos modificados:**
+- `PDL-FC-MVP/src/FichaCosto.Installer/post-install.ps1`
+- `PDL-FC-MVP/src/FichaCosto.Installer/Package.wxs`
+
+**Archivos creados:**
+- `PDL-FC-MVP/src/FichaCosto.Installer/scripts/copy-sql-files.ps1`
+- `progress/impl_FIX-001.md`
+
+**Próximos pasos:**
+- [ ] Ejecutar build.ps1 para compilar MSI
+- [ ] Probar instalación en entorno Windows
+- [ ] Verificar creación de BD y acceso a Swagger UI
+- [ ] Actualizar feature_list.json con status: "done"
+
